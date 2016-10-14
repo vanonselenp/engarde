@@ -15,6 +15,14 @@ def home():
 
     return render_template('index.html', content=content)
 
+@app.route('/about', methods=['GET'])
+def about():
+    content = file('pages/about.md', 'r').read()
+    content = markdown.markdown(content)
+    content = Markup(content)
+
+    return render_template('index.html', content=content)
+
 if __name__ == '__main__':
     reload(sys)
     sys.setdefaultencoding('utf8')

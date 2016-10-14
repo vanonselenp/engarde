@@ -7,6 +7,6 @@ setup(
     description='Random remake reskin of existing website',
     install_requires=[
         'markdown',
-        'flask',
+        'Flask',
     ],
 )
