@@ -11,7 +11,6 @@ app = Flask(__name__)
 def home():
     content = file('pages/home.md', 'r').read()
     content = markdown.markdown(content)
-    #content = markdown.markdownFromFile('pages/home.md')
     content = Markup(content)
 
     return render_template('index.html', content=content)
